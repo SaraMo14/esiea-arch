@@ -1,0 +1,11 @@
+2021-12-02 12:02:35,667 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-12-02 12:04:42,583 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.esiea:archproject:0.0.1-SNAPSHOT @ C:\Users\saram\eclipse-workspace-esiea\archproject\pom.xml.
+2021-12-02 12:04:43,535 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-02 12:04:43,536 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\saram\eclipse-workspace-esiea\archproject\src\main\resources
+2021-12-02 12:04:43,539 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-02 12:04:43,540 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\saram\eclipse-workspace-esiea\archproject\src\test\resources
+2021-12-02 12:04:44,471 [Worker-8: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.esiea:archproject:0.0.1-SNAPSHOT @ C:\Users\saram\eclipse-workspace-esiea\archproject\pom.xml.
+2021-12-02 12:04:45,176 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-02 12:04:45,177 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\saram\eclipse-workspace-esiea\archproject\src\main\resources
+2021-12-02 12:04:45,180 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-12-02 12:04:45,181 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\saram\eclipse-workspace-esiea\archproject\src\test\resources
