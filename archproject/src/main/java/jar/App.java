@@ -10,9 +10,10 @@ public class App
 	// output : 30
 	
 	public static int maxArray(int[] num_list) {
-		if (num_list == null || num_list.length==0) 
-			throw new NullPointerException("Array empty!");
-			
+		if (num_list == null)
+			throw new IllegalArgumentException("Null input!");
+		if (num_list.length==0) 
+			throw new ArrayIndexOutOfBoundsException ("Array empty!");
 		int max = num_list[0];
 		for (int i = 1; i< num_list.length; i++) {
 			if (num_list[i]>max)
@@ -28,6 +29,8 @@ public class App
 	// input  : Follow
 	// output : wolloF
 	public static String reverseWord(String word) {
+		if (word.length()==0)
+			throw new IllegalArgumentException("Can't reverse empty string!");
 		String newWord="";
 		for (int i=word.length()-1; i>=0; i--) {
 			newWord +=word.charAt(i);

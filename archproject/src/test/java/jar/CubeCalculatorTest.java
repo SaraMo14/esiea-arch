@@ -13,10 +13,18 @@ public class CubeCalculatorTest{
         System.out.println("Testing cubeCalculator(int) method");
     }
 	
-	@Test(timeout = 10)
-	public void testCubeCalc() {
+	@Test()
+	public void testCubeCalcWhenPositive() {
 		assertEquals(8, App.cubeCalculator(2));
+	}
+	
+	@Test()
+	public void testCubeCalcWhenZero() {
 		assertEquals(0, App.cubeCalculator(0));
+	}
+	
+	@Test()
+	public void testCubeCalcWhenNegative() {
 		assertSame(true, App.cubeCalculator(-1) == -1);
 	}
 }

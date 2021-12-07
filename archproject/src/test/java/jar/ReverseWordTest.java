@@ -1,6 +1,7 @@
 package jar;
 	
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 import org.junit.After;
 import org.junit.Before;
@@ -27,12 +28,19 @@ public class ReverseWordTest{
     } 
 	
 
-	@Test(timeout = 10)
-	public void testReverseWord1() {
-		//String word = "Hello";
+	@Test()
+	public void testReverseWord() {
 		assertEquals("olleH", App.reverseWord(test_word));
-		//String word2 = "oppo";
+	}
+	@Test()
+	public void testReverseWord2() {
 		assertEquals("oppo", App.reverseWord(test_word2));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testMaxArrayWhenEmpty() {
+		String s = "";
+		assertThrows(IllegalArgumentException.class, () -> App.reverseWord(s));
 	}
 	
 }
