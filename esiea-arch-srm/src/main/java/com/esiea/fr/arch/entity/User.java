@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,6 +16,7 @@ public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name ="USER_ID")
 	private long id;
 	
@@ -24,7 +27,7 @@ public class User implements Serializable{
 	private String lastname;
 	
 	@Column(name ="MOBILE")
-	private int mobile;
+	private String mobile;
 	
 	@Column(name ="BIRTHDAY")
 	private Date birthday;
@@ -54,11 +57,11 @@ public class User implements Serializable{
 		this.lastname = lastname;
 	}
 
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 

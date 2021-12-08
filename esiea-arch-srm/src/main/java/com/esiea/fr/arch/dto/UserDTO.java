@@ -6,14 +6,16 @@ import java.util.Date;
  * @author saram
  *
  */
-
 public class UserDTO {
 	//private int ID; we don't have to mention it because the User doen't have to know it
 	private String firstname;
 	private String lastname;
 	private Date birthday;
 	private String mobile;
-	
+
+	public UserDTO() {
+        super();
+    }
 	public UserDTO(String firstname, String lastname, Date birthday, String mobile) {
 		this.firstname=firstname;
 		this.lastname=lastname;
