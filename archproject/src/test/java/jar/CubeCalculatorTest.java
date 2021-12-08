@@ -2,6 +2,7 @@ package jar;
 	
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertThrows;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,17 +14,17 @@ public class CubeCalculatorTest{
         System.out.println("Testing cubeCalculator(int) method");
     }
 	
-	@Test()
+	@Test
 	public void testCubeCalcWhenPositive() {
 		assertEquals(8, App.cubeCalculator(2));
 	}
 	
-	@Test()
+	@Test
 	public void testCubeCalcWhenZero() {
 		assertEquals(0, App.cubeCalculator(0));
 	}
 	
-	@Test()
+	@Test
 	public void testCubeCalcWhenNegative() {
 		assertSame(true, App.cubeCalculator(-1) == -1);
 	}

@@ -29,7 +29,7 @@ public class App
 	// input  : Follow
 	// output : wolloF
 	public static String reverseWord(String word) {
-		if (word.length()==0)
+		if (word==null || word.length()==0)
 			throw new IllegalArgumentException("Can't reverse empty string!");
 		String newWord="";
 		for (int i=word.length()-1; i>=0; i--) {
