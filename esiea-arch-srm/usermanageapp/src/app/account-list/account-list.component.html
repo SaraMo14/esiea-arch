@@ -1,0 +1,28 @@
+
+<h4> Account List</h4>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Username</th>
+            <th> Creation Date </th>
+            <th> End Date</th>
+            <th> Active </th>
+            <th> type </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let account of accounts" >
+            <td> {{ account.username }} </td>
+            <td> {{ account.creationDate | date:'yyyy-MM-dd'}} </td>
+            <td> {{ account.endDate | date:'yyyy-MM-dd'}} </td>
+            <td> {{ account.activated }} </td>
+            <td> {{ account.type }} </td>
+            <td>
+                <button *ngIf="account.activated==false" (click) = "activateAccount(account.username)" class = "btn btn-success" style="margin-left: 10px"> Activate</button>
+              <button *ngIf="account.activated==true" (click) = "deactivateAccount(account.username)" class = "btn btn-warning" style="margin-left: 10px"> Deactivate</button>
+              <button (click) = "deleteAccount(account.username)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+              <button (click) = "resetPassword(account.username)" class = "btn btn-secondary" style="margin-left: 10px"> Reset Password</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

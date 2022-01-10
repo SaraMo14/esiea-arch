@@ -17,6 +17,19 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+	 	<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+		<dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+		<!-- <dependency>
+	    	<groupId>org.springframework.boot</groupId>
+	    	<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>-->
 		<dependency>
 	 		<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
@@ -69,8 +82,33 @@
 	        <artifactId>spring-boot-starter-log4j2</artifactId>
 	    </dependency>
 	   <!--  --> 
+		<!-- Junit 5 -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-engine</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.platform</groupId>
+		    <artifactId>junit-platform-launcher</artifactId>
+		    <scope>test</scope>
+		</dependency>
+		 
+		<!-- Mockito extention -->
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-junit-jupiter</artifactId>
+		    <scope>test</scope>
+		</dependency>
 	</dependencies>
 
+
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -78,21 +116,21 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.5.1</version>
-    <configuration>
-        <source>1.8</source>
-        <target>1.8</target>
-        <annotationProcessorPaths>
-            <path>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct-processor</artifactId>
-                <version>1.4.2.Final</version>
-            </path>
-        </annotationProcessorPaths>
-    </configuration>
-</plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-compiler-plugin</artifactId>
+			    <version>3.5.1</version>
+			    <configuration>
+			        <source>1.8</source>
+			        <target>1.8</target>
+			        <annotationProcessorPaths>
+			            <path>
+			                <groupId>org.mapstruct</groupId>
+			                <artifactId>mapstruct-processor</artifactId>
+			                <version>1.4.2.Final</version>
+			            </path>
+			        </annotationProcessorPaths>
+			    </configuration>
+			</plugin>
 		</plugins>
 	</build>
 

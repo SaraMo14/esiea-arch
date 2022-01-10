@@ -1,0 +1,33 @@
+<br/>
+<div class="col-md-6 offset-md-3">
+    <h3> Create User </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class ="form-control" id = "firstname"
+                [(ngModel)] = "user.firstname" name = "firstname" required>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class ="form-control" id = "lastname"
+                [(ngModel)] = "user.lastname" name = "lastname" required>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> Mobile</label>
+            <input type="text" class ="form-control" id = "mobile"
+                [(ngModel)] = "user.mobile" name = "mobile" required>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> Birthday</label>
+            <input type="date" class ="form-control" id = "birthday"
+                [(ngModel)] = "user.birthday" name = "birthday" required>
+        </div>
+        <br/>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

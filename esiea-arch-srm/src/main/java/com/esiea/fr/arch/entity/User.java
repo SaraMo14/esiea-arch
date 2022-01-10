@@ -1,13 +1,18 @@
 package com.esiea.fr.arch.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -32,7 +37,27 @@ public class User implements Serializable{
 	@Column(name ="BIRTHDAY")
 	private Date birthday;
 
+	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Account> accounts = new ArrayList<>();
 	
+	//setters and getters
+	
+	public List<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+
+	//to add account to user's list
+	public void addAccount(Account acc) {
+		this.accounts.add(acc);
+	}
+	//to remove account to user's list
+	public void removeAccount(Account acc) {
+		this.accounts.remove(acc);
+	}
 	public long getId() {
 		return id;
 	}

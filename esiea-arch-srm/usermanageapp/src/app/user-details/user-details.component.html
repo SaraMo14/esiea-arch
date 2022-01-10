@@ -1,0 +1,21 @@
+<br/>
+<div  class = "container"><h3> User Details</h3><br/>
+<div>
+    <div>
+        <label> <b> First Name: </b></label> {{user.firstname}}
+    </div><br/>
+    <div>
+        <label> <b> Last Name: </b></label> {{user.lastname}}
+    </div><br/>
+    <div>
+        <label> <b> Mobile: </b></label> {{user.mobile}}
+    </div><br/>
+
+    <div>
+        <label> <b> Birthday: </b></label> {{user.birthday | date:'mediumDate'}}
+    </div>
+</div>
+</div>
+<br/>
+
+<app-account-list></app-account-list>

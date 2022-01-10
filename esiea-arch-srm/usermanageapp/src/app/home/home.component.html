@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <div class="card text-center" style="padding: 20px;">
+     <h1>This is Home Page</h1>
+    </div>
+ </div>
+<div *ngIf="isLoggedIn()!='{}'" >
+ <h4> Account </h4>
+ <table class = "table table-striped">
+     <thead>
+         <tr>
+             <th> Username</th>
+             <th> Creation Date </th>
+             <th> End Date</th>
+             <th> Active </th>
+             <th> Type </th>
+         </tr>
+     </thead>
+     <tbody >
+         <tr >
+             <td> {{ account.username }} </td>
+             <td> {{ account.creationDate | date:'yyyy-MM-dd'}} </td>
+             <td> {{ account.endDate | date:'yyyy-MM-dd'}} </td>
+             <td> {{ account.activated }} </td>
+             <td> {{ account.type }} </td>
+             <td>
+               <!--<button (click) = "accountService.deactivateAccount(account.username)" class = "btn btn-info"> Deactivate</button>
+              <button *ngIf="account.activated==false" (click) = "accountService.activateAccount(account.username)" class = "btn btn-success" style="margin-left: 10px"> Activate</button>
+              <button *ngIf="account.activated==true" (click) = "accountService.deactivateAccount(account.username)" class = "btn btn-warning" style="margin-left: 10px"> Deactivate</button>
+               -->
+            </td>
+         </tr>
+     </tbody>
+ </table>
+</div>

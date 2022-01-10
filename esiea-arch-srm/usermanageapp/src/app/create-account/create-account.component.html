@@ -1,0 +1,40 @@
+<br/>
+<div class="col-md-6 offset-md-3">
+    <h3> Create Account </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Username</label>
+            <input type="text" class ="form-control" id = "username"
+                [(ngModel)] = "account.username" name = "username" required>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> Password</label>
+            <input type="password" class ="form-control" id = "password"
+                [(ngModel)] = "account.password" name = "password" required>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> Creation date</label>
+            <!-- <input type="text" placeholder={{this.today}} class ="form-control" id = "creationDate"-->
+           <input type="date"  class ="form-control" id = "creationDate"
+                [(ngModel)] = "account.creationDate" name = "creationDate" required>
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> End date</label>
+            <input type="date" class ="form-control" id = "endDate"
+                [(ngModel)] = "account.endDate" name = "endDate" required >
+        </div>
+        <br/>
+        <div class="form-group">
+            <label> Role (admin/standard)</label>
+            <input type="text" class ="form-control" id = "type"
+                [(ngModel)] = "account.type" name = "type" required>
+        </div>
+        <br/>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

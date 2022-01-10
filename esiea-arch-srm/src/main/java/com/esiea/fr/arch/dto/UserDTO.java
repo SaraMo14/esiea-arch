@@ -1,5 +1,7 @@
 package com.esiea.fr.arch.dto;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -12,7 +14,9 @@ public class UserDTO {
 	private String lastname;
 	private Date birthday;
 	private String mobile;
-
+//added later
+   // private List<AccountDTO> comments = new ArrayList<>();
+//
 	public UserDTO() {
         super();
     }

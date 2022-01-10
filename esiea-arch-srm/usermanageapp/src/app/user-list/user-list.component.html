@@ -1,0 +1,30 @@
+<br/>
+<h2> Users List</h2><br/>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search by firstname, lastname or birthday" [(ngModel)]="filterTerm">
+  </div>
+  <br/>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Mobile</th>
+            <th> Birthday </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users | filter:filterTerm" >
+            <td> {{ user.firstname }} </td>
+            <td> {{ user.lastname }} </td>
+            <td> {{ user.mobile }} </td>
+            <td> {{ user.birthday| date: 'yyyy-MM-dd' }} </td>
+            <td>
+                <button (click) = "userDetails(user.id)" class = "btn btn-success" style="margin-left: 10px"> View</button>
+                <button (click) = "updateUser(user.id)" class = "btn btn-info" style="margin-left: 10px"> Update</button>
+                <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "createAccount(user.id)" class = "btn btn-light" style="margin-left: 10px"> Add Account</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
